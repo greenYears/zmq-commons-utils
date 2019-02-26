@@ -1,4 +1,4 @@
-package com.github.core.utils;
+package com.github.greenyears.core.utils;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;

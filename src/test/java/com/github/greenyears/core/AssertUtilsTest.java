@@ -1,6 +1,6 @@
-package com.github.core;
+package com.github.greenyears.core;
 
-import com.github.core.utils.AssertUtil;
+import com.github.greenyears.core.utils.AssertUtil;
 import org.junit.Test;
 
 /**

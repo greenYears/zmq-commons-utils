@@ -1,6 +1,6 @@
-package com.github.core;
+package com.github.greenyears.core;
 
-import com.github.core.utils.CalculateUtil;
+import com.github.greenyears.core.utils.CalculateUtil;
 import org.junit.Test;
 
 /**

@@ -1,4 +1,4 @@
-package com.github.core.exception;
+package com.github.greenyears.core.exception;
 
 /**
  * api exception.

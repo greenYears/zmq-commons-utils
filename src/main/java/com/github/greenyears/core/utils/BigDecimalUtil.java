@@ -1,4 +1,4 @@
-package com.github.core.utils;
+package com.github.greenyears.core.utils;
 
 import java.math.BigDecimal;
 

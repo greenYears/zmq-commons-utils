@@ -1,6 +1,6 @@
-package com.github.core.utils;
+package com.github.greenyears.core.utils;
 
-import com.github.core.exception.ApiException;
+import com.github.greenyears.core.exception.ApiException;
 import org.apache.commons.collections4.CollectionUtils;
 import org.apache.commons.lang3.StringUtils;
 
