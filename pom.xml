@@ -7,6 +7,28 @@
     <version>1.0.0</version>
     <name>zmq-commons-utils</name>
     <description>ZMQ Commons Utils</description>
+    <!-- 项目主页的URL, Maven产生的文档用 -->
+    <url>https://github.com/greenYears/zmq-commons-utils</url>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>zhouzichuan</name>
+            <email>zichuan.zhou91@gmail.com</email>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git@github.com:greenYears/zmq-commons-utils.git</connection>
+        <developerConnection>scm:git@github.com:greenYears/zmq-commons-utils.git</developerConnection>
+        <url>https://github.com/greenYears/zmq-commons-utils</url>
+    </scm>
 
     <properties>
         <java.version>1.8</java.version>
@@ -70,6 +92,49 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>3.0.1</version>
+                <executions>
+                    <execution>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>jar-no-fork</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <!-- Javadoc -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>3.0.1</version>
+                <configuration>
+                    <aggregate>true</aggregate>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <!-- Compiler 插件, 设定JDK版本 -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -85,5 +150,15 @@
         </plugins>
     </build>
 
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots/</url>
+        </snapshotRepository>
+        <repository>
+            <id>snapshots</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 
 </project>

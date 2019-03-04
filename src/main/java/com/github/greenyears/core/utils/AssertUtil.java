@@ -10,7 +10,6 @@ import java.util.Collection;
  * assert util.
  *
  * @author zhoumeiqin
- * @date 2018/10/23
  */
 public class AssertUtil {
 
