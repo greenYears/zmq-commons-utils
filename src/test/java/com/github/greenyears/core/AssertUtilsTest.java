@@ -1,6 +1,6 @@
 package com.github.greenyears.core;
 
-import com.github.greenyears.core.utils.AssertUtil;
+import com.github.greenyears.core.utils.AssertUtils;
 import org.junit.Test;
 
 /**
@@ -15,6 +15,6 @@ public class AssertUtilsTest {
     public void testAssert() {
         String str = "";
         String message = "The message is blank";
-        AssertUtil.notBlank(str, message);
+        AssertUtils.notBlank(str, message);
     }
 }

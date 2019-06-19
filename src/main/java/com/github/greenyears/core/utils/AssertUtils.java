@@ -11,7 +11,7 @@ import java.util.Collection;
  *
  * @author zhoumeiqin
  */
-public class AssertUtil {
+public class AssertUtils {
 
 
     public static void state(boolean expression, String message) {

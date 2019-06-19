@@ -17,7 +17,7 @@ import java.util.List;
  * @author zhoumeiqin
  */
 @Slf4j
-public class CalculateUtil {
+public class CalculateUtils {
     /**
      * format_yyyy-MM-dd HH:mm:ss.
      */
@@ -443,7 +443,7 @@ public class CalculateUtil {
      * @return 是否在string范围内
      */
     public static boolean isDateBetween(String string, Date date, String format) {
-        String target = CalculateUtil.format(date, format);
+        String target = CalculateUtils.format(date, format);
         List<String> list = Lists.newArrayList(Splitter.on("-").trimResults().omitEmptyStrings().split(string));
         if (CollectionUtils.isEmpty(list)) {
             return false;
