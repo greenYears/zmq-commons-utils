@@ -13,7 +13,6 @@ import java.security.SecureRandom;
  * Aes Util.
  *
  * @author zhoumeiqin
- * @date 2019-06-19
  */
 @Slf4j
 public class AesUtils {
@@ -57,7 +56,7 @@ public class AesUtils {
      *
      * @param content  加密字符串
      * @param password 用于解密的密码
-     * @return
+     * @return 解密后的字符串
      */
     public static String decrypt(String content, String password) {
         try {
@@ -78,7 +77,7 @@ public class AesUtils {
     /**
      * 生成加密秘钥
      *
-     * @return
+     * @return key
      */
     private static SecretKeySpec getSecretKey(final String password) {
         //返回生成指定算法密钥生成器的 KeyGenerator 对象
@@ -103,7 +102,7 @@ public class AesUtils {
      * 将二进制转换成16进制.
      *
      * @param buf
-     * @return
+     * @return string
      */
     public static String parseByte2HexStr(byte[] buf) {
         StringBuffer sb = new StringBuffer();
@@ -121,7 +120,7 @@ public class AesUtils {
      * 将16进制转换为二进制.
      *
      * @param hexStr
-     * @return
+     * @return byte[]
      */
     public static byte[] parseHexStr2Byte(String hexStr) {
         if (hexStr.length() < 1) {
