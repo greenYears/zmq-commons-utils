@@ -13,7 +13,6 @@ import java.util.Collection;
  */
 public class AssertUtils {
 
-
     public static void state(boolean expression, String message) {
         if (!expression) {
             throw new ApiException(message);
