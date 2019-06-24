@@ -101,7 +101,7 @@ public class AesUtils {
     /**
      * 将二进制转换成16进制.
      *
-     * @param buf
+     * @param buf buf
      * @return string
      */
     public static String parseByte2HexStr(byte[] buf) {
@@ -119,7 +119,7 @@ public class AesUtils {
     /**
      * 将16进制转换为二进制.
      *
-     * @param hexStr
+     * @param hexStr hexStr
      * @return byte[]
      */
     public static byte[] parseHexStr2Byte(String hexStr) {
