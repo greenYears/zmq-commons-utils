@@ -1,11 +1,14 @@
 package com.github.greenyears.core.exception;
 
+import lombok.Getter;
+
 /**
  * api exception.
  *
  * @author zhoumeiqin
  * @date 2019-06-20
  */
+@Getter
 public class ApiException extends RuntimeException {
     private static final long serialVersionUID = -1701552639249164727L;
     private String code;
