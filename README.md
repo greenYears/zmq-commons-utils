@@ -14,3 +14,7 @@ ps: 虽然此处也是造轮子，但是希望后面的开发不需要。
 ##### BigDecimalUtil
 
 ##### CalculateUtil
+该工具类改名为DateUtil
+
+##### GeoUtil
+计算2点直线距离

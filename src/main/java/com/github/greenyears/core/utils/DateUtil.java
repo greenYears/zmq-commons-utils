@@ -17,8 +17,7 @@ import java.util.List;
  * @author zhoumeiqin
  */
 @Slf4j
-@Deprecated
-public class CalculateUtils {
+public class DateUtil {
     /**
      * format_yyyy-MM-dd HH:mm:ss.
      */
@@ -283,7 +282,7 @@ public class CalculateUtils {
      * @param offset 0今天，1明天，-1昨天，依次类推
      * @return 时间戳(毫秒)
      */
-    public static long dayEndtToMillisend(int offset) {
+    public static long dayEndToMillisend(int offset) {
         LocalDateTime localDateTime = dayEnd(offset);
         return toMillisecond(localDateTime);
     }
@@ -400,6 +399,46 @@ public class CalculateUtils {
         return toDate(resultDateTime);
     }
 
+
+    /**
+     * 当前日期加上days的时间.
+     *
+     * @param date 源时间
+     * @param days 要加上的时间
+     * @return 当前时间+days之后的时间
+     */
+    public static Date plusDays(Date date, long days) {
+        LocalDateTime source = toLocalDateTime(date);
+        LocalDateTime localDateTime = source.plusDays(days);
+        return toDate(localDateTime);
+    }
+
+    /**
+     * 当前日期加上days的时间.
+     *
+     * @param days 要加上的时间
+     * @return 当前时间+days之后的时间
+     */
+    public static Date plusDays(long days) {
+        LocalDateTime source = LocalDateTime.now();
+        LocalDateTime localDateTime = source.plusDays(days);
+        return toDate(localDateTime);
+    }
+
+    /**
+     * 新增对应的时间.
+     *
+     * @param date             源时间
+     * @param amountToSubtract 要加上的时间
+     * @param unit             时间单位
+     * @return 最终的时间
+     */
+    public static Date plus(Date date, long amountToSubtract, TemporalUnit unit) {
+        LocalDateTime localDateTime = toLocalDateTime(date);
+        LocalDateTime resultDateTime = localDateTime.plus(amountToSubtract, unit);
+        return toDate(resultDateTime);
+    }
+
     /**
      * 计算2个时间之间相差的日期天数.
      *
@@ -444,7 +483,7 @@ public class CalculateUtils {
      * @return 是否在string范围内
      */
     public static boolean isDateBetween(String string, Date date, String format) {
-        String target = CalculateUtils.format(date, format);
+        String target = DateUtil.format(date, format);
         List<String> list = Lists.newArrayList(Splitter.on("-").trimResults().omitEmptyStrings().split(string));
         if (CollectionUtils.isEmpty(list)) {
             return false;
