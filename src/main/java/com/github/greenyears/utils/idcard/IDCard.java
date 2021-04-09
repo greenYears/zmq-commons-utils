@@ -1,7 +1,7 @@
 package com.github.greenyears.utils.idcard;
 
-import com.github.greenyears.core.utils.AssertUtils;
 import com.github.greenyears.core.utils.DateUtil;
+import com.github.greenyears.utils.ast.AssertUtils;
 import lombok.Data;
 import lombok.experimental.Accessors;
 import org.apache.commons.lang3.StringUtils;
