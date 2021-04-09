@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.github.greenyears</groupId>
     <artifactId>zmq-commons-utils</artifactId>
-    <version>1.1.0</version>
+    <version>1.1.1</version>
     <name>zmq-commons-utils</name>
     <description>ZMQ Commons Utils</description>
     <!-- 项目主页的URL, Maven产生的文档用 -->
